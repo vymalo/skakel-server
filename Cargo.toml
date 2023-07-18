@@ -1,0 +1,27 @@
+[package]
+name = "skakel-backend"
+version = "0.1.0"
+edition = "2021"
+
+[toolchain]
+channel = "1.69.0"
+components = ["rustfmt", "clippy"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-graphql = "5.0.10"
+async-graphql-axum = "5.0.10"
+async-trait = "0.1.71"
+axum = "0.6.19"
+dotenv = "0.15.0"
+metrics = "0.21.1"
+metrics-exporter-prometheus = "0.12.1"
+opentelemetry = {version = "0.19.0", features = ["rt-tokio"]}
+opentelemetry-jaeger = {version = "0.18.0", features = ["rt-tokio"]}
+serde = {version = "1.0.171", features = ["derive"]}
+tokio = { version = "1.29.1", features = ["full"] }
+tower = "0.4.13"
+tracing = "0.1.37"
+tracing-opentelemetry = "0.19.0"
+tracing-subscriber = {version = "0.3.17", features = ["std", "env-filter"]}
